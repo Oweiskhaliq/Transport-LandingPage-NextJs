@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ["PT Serif", "serif"], // Add PT Serif
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
