@@ -23,12 +23,12 @@ const Carousel = () => {
       description: "We are dedicated to achieving your goals together.",
     },
     {
-      image: "/carouselImage/bus5.jpg",
+      image: "/carouselImage/bus7.webp",
       title: "Welcome to Noor Islam",
       description: "Bus Rental And Transportation",
     },
     {
-      image: "/carouselImage/bus6.jpg",
+      image: "/carouselImage/bus8.webp",
       title: "Welcome to Noor Islam",
       description: "Bus Rental And Transportation",
     },
@@ -52,30 +52,32 @@ const Carousel = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen ">
       <NavBar />
       {/* Carousel wrapper */}
-      <div className="relative h-full overflow-hidden">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              currentIndex === index ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={slide.image}
-              className="w-full h-full object-cover"
-              alt={slide.title}
-            />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="text-xl font-medium">{slide.title}</h1>
-              <h2 className="text-5xl font-bold mt-2">{slide.description}</h2>
-            </div>
-          </div>
-        ))}
-      </div>
+      <div className="bg-black h-screen w-screen opacity-90">
+        <div className="relative h-full overflow-hidden">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                currentIndex === index ? "opacity-80" : "opacity-0"
+              }`}
+            >
+              <img
+                src={slide.image}
+                className="w-full h-full object-cover   "
+                alt={slide.title}
+              />
 
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-serif z-50">
+                <h1 className="text-[29px] ">{slide.title}</h1>
+                <h2 className="text-5xl font-bold mt-2">{slide.description}</h2>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* Slider controls */}
       <button
         type="button"
