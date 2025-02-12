@@ -14,13 +14,13 @@ const OurServices = () => {
   return (
     <section
       id="services"
-      className="text-center py-12 font-serif bg-[#0b1b3e] text-[#f4f4ee]"
+      className="text-center md:py-12 py-4 font-serif bg-[#0b1b3e] text-[#f4f4ee] "
     >
-      <h2 className="text-[57px]  font-medium ">Our Services</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 px-6 md:px-28">
+      <h2 className="md:text-[57px] text-[36px]  font-medium ">Our Services</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:mt-6 pt-4 px-6 md:px-28">
         {services.map((service, index) => (
           <Link key={index} href={service.link}>
-            <div className=" bg-[#161921] shadow-xg border border-[#1c3caa] rounded-xl p-14 text-center transition duration-300 hover:bg-white hover:text-black   w-6/6 h-40 cursor-pointer ">
+            <div className=" bg-[#161921] shadow-xg border border-[#1c3caa] rounded-xl md:p-14 p-10 text-center transition duration-300 hover:bg-white hover:text-black   md:w-6/6 md:h-44 cursor-pointer ">
               <h3 className="text-lg font-semibold">{service.text}</h3>
             </div>
           </Link>

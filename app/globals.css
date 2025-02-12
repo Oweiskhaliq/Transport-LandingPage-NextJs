@@ -26,3 +26,6 @@
 .form-btn{
   @apply  text-white px-24  py-2 text-[12px] rounded-sm hover:font-semibold
 }
+.header-icons{
+  @apply bg-gray-700 p-2 rounded-full hover:bg-white hover:text-black 
+}

@@ -8,9 +8,9 @@ import { MdEmail } from "react-icons/md";
 
 const ContactBar = () => {
   return (
-    <div className="flex flex-col md:flex-row font-serif  justify-between items-center  bg-[#c09550] text-black py-1 px-4 md:px-14  text-sm md:text-[11px]">
+    <div className="flex flex-col md:flex-row font-serif  justify-between items-center  bg-[#c09550] text-black py-1 px-4 md:px-14  text-sm md:text-[12px]">
       {/* Left Section - Contact Info */}
-      <div className="flex flex-col md:flex-row items-left sm:px-20 space-y-2 md:space-y-0 md:space-x-8 text-center md:text-left">
+      <div className="flex flex-col md:flex-row items-left sm:px-8 space-y-2 md:space-y-0 md:space-x-8 text-center md:text-left">
         <span className="contactBar-slash">|</span>
         {/* Phone */}
         <a href="tel:+971502631195" className="contactBar-items">
@@ -33,7 +33,7 @@ const ContactBar = () => {
         {/* Email */}
         <a
           href="mailto:info@noorislambusrental.com"
-          className="contactBar-items"
+          className="contactBar-items text-[13px]"
         >
           <MdEmail size={16} />
           <span>info@noorislambusrental.com</span>
@@ -41,7 +41,7 @@ const ContactBar = () => {
       </div>
 
       {/* Right Section - Social Icons */}
-      <div className="flex space-x-2 mt-2 md:mt-0">
+      <div className="flex space-x-2 mt-2 font-[14px] md:mt-0 ">
         <a
           href="https://www.facebook.com/noorislaamtransport/"
           target="_blank"

@@ -11,11 +11,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#0b1b3e] text-gray-300 py-8 font-serif">
       {/* Top Row - Logo and Menu */}
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-16 h-40 border-b border-gray-600">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-16 md:h-40 h-24 border-b border-gray-600">
         <div>
           <img src="./logo.png" alt="Noor Islam Transport" className="h-12" />
         </div>
-        <nav className="flex space-x-6 text-lg">
+        <nav className="md:flex space-x-6 text-lg hidden">
           <Link href="/" className="hover:text-white">
             Home
           </Link>
@@ -110,26 +110,30 @@ const Footer = () => {
         </p>
         <div className="flex space-x-4 mt-4 md:mt-0">
           <Link
-            href="#"
-            className="bg-gray-700 p-2 rounded-full hover:bg-white hover:text-black"
+            href="https://www.facebook.com/noorislamtransport"
+            className="header-icons"
+            target="_blank"
           >
             <FaFacebookF size={16} />
           </Link>
           <Link
-            href="#"
-            className="bg-gray-700 p-2 rounded-full hover:bg-white hover:text-black"
+            href="https://www.instagram.com/noorislamtransport"
+            className="header-icons"
+            target="_blank"
           >
             <FaInstagram size={16} />
           </Link>
           <Link
-            href="#"
-            className="bg-gray-700 p-2 rounded-full hover:bg-white hover:text-black"
+            href="https://www.tiktok.com/noorislamtransport"
+            className="header-icons"
+            target="_blank"
           >
             <FaTiktok size={16} />
           </Link>
           <Link
-            href="#"
-            className="bg-gray-700 p-2 rounded-full hover:bg-white hover:text-black"
+            href="https://www.pinterest.com/noorislamtransport"
+            className="header-icons"
+            target="_blank"
           >
             <FaPinterest size={16} />
           </Link>

@@ -52,11 +52,14 @@ const BookingForm = () => {
   };
 
   return (
-    <section className="flex flex-col font-serif md:flex-row items-center  justify-between px-12 py-16 bg-[#f5f5f5]">
+    <section className="flex flex-col font-serif md:flex-row items-center  justify-between md:px-8 px-6 py-16 bg-[#f5f5f5]">
       {/* Left Column - Text Section */}
       <BookingTextSection />
       {/* Right Column - Booking Form */}
-      <div id="booking-from" className="md:w-1/2 p-8 shadow-lg rounded-lg ">
+      <div
+        id="booking-from"
+        className="md:w-1/2 md:px-8 shadow-lg rounded-lg mt-32 md:mt-0"
+      >
         {submitted ? (
           <div className="text-center p-6 bg-green-100 text-green-800 rounded-md">
             <h3 className="text-lg font-semibold">Thank You!</h3>
