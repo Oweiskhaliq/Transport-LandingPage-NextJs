@@ -8,11 +8,11 @@ const NavBar = () => {
   return (
     <>
       {/* Transparent Navigation Menu */}
-      <nav className="absolute top-0 left-0 w-full px-20 py-4 flex justify-between items-end text-white bg-transparent z-50">
+      <nav className="absolute top-0 left-0 w-full px-20 py-4 flex justify-between items-end text-white z-50">
         <div>
           <img src="/logo.png" alt="Noor Islam Transport" className="h-12" />
         </div>
-        <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-32 first-letter:capitalize font-serif font-medium text-[15px] text-right">
+        <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-32 first-letter:capitalize font-serif font-medium text-[17px] text-right    ">
           <li>
             <Link href="/" className="hover:underline">
               Home
