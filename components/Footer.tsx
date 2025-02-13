@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaTiktok,
   FaPinterest,
+  FaFacebook,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -105,38 +106,38 @@ const Footer = () => {
 
       {/* Bottom Row - Copyright & Social Icons */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 mt-20 border-t border-gray-700 pt-4 ">
-        <p className="text-gray-400">
+        <p className="text-gray-400 order-2 p-4">
           Noor Islam Transport © 2024. All Rights Reserved.
         </p>
-        <div className="flex space-x-4 mt-4 md:mt-0">
-          <Link
-            href="https://www.facebook.com/noorislamtransport"
-            className="header-icons"
+        <div className="flex space-x-4 mt-4 md:mt-0 order-1 md:order-2">
+          <a
+            href="https://www.facebook.com/noorislaamtransport/"
             target="_blank"
+            className="bg-[#36528e] p-1 rounded"
           >
-            <FaFacebookF size={16} />
-          </Link>
-          <Link
+            <FaFacebook size={34} color="#FFFFFF" />
+          </a>
+          <a
             href="https://www.instagram.com/noorislamtransport"
-            className="header-icons"
             target="_blank"
+            className="bg-gray-800  p-1 rounded"
           >
-            <FaInstagram size={16} />
-          </Link>
-          <Link
-            href="https://www.tiktok.com/noorislamtransport"
-            className="header-icons"
+            <FaInstagram size={34} color="#FFFFFF" />
+          </a>
+          <a
+            href="http://tiktok.com/@noorislamtransport"
             target="_blank"
+            className="bg-gray-600 p-1 rounded"
           >
-            <FaTiktok size={16} />
-          </Link>
-          <Link
-            href="https://www.pinterest.com/noorislamtransport"
-            className="header-icons"
+            <FaTiktok size={34} color="#FFFFFF" />
+          </a>
+          <a
+            href="https://www.pinterest.com/Noorislam_transport/"
             target="_blank"
+            className="bg-red-700 p-1 rounded"
           >
-            <FaPinterest size={16} />
-          </Link>
+            <FaPinterest size={34} color="#FFFFFF" />
+          </a>
         </div>
       </div>
     </footer>

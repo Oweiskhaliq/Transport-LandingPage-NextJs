@@ -52,22 +52,19 @@ const BookingForm = () => {
   };
 
   return (
-    <section className="flex flex-col font-serif md:flex-row items-center  justify-between md:px-8 px-6 py-16 bg-[#f5f5f5]">
+    <section className="flex flex-col font-serif md:flex-row items-center  justify-between  py-16 bg-gray-100 ">
       {/* Left Column - Text Section */}
       <BookingTextSection />
       {/* Right Column - Booking Form */}
-      <div
-        id="booking-from"
-        className="md:w-1/2 md:px-8 shadow-lg rounded-lg mt-32 md:mt-0"
-      >
+      <div id="booking-from" className="sm:w-1/2 pt-4   font-sm  ">
         {submitted ? (
-          <div className="text-center p-6 bg-green-100 text-green-800 rounded-md">
+          <div className="text-left p-6 bg-green-100 text-green-800 rounded-md">
             <h3 className="text-lg font-semibold">Thank You!</h3>
             <p>Your booking details have been saved successfully.</p>
           </div>
         ) : (
           <form
-            className="flex flex-col space-y-6 px-6 "
+            className="flex text-start flex-col md:space-y-4   space-y-8  w-full  pt-20 md:pt-0 md:p-20 bg-gray-100"
             onSubmit={handleSubmit}
           >
             {step === 1 && (
@@ -127,9 +124,9 @@ const BookingForm = () => {
                     name="returnTrip"
                     checked={formData.returnTrip}
                     onChange={handleChange}
-                    className="w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 text-blue-600 border-gray-300  rounded focus:ring-blue-500"
                   />
-                  <label className="ml-2 text-gray-700 text-xs">Return</label>
+                  <label className="ml-2 text-gray-500 text-xs">Return</label>
                 </div>
 
                 {formData.returnTrip && (
@@ -258,11 +255,11 @@ const BookingForm = () => {
               </>
             )}
 
-            <div className="flex justify-between space-x-4">
+            <div className="flex justify-end pt-2 md:pt-10 md:space-x-4  space-x-4 ">
               {step > 1 && (
                 <button
                   type="button"
-                  className="bg-[#363f5e] form-btn hover:bg-[#373f5b] "
+                  className=" bg-[#061138]  form-btn hover:bg-[#373f5b]  "
                   onClick={() => setStep(step - 1)}
                 >
                   PREVIOUS
@@ -271,10 +268,10 @@ const BookingForm = () => {
               {step < 3 ? (
                 <button
                   type="button"
-                  className="bg-[#363f5e] form-btn hover:bg-[#373f5b]  "
+                  className="bg-[#061138]   form-btn hover:bg-[#373f5b]  "
                   onClick={handleNext}
                 >
-                  Next
+                  NEXT
                 </button>
               ) : (
                 <button type="submit" className="bg-[#c09550] form-btn">

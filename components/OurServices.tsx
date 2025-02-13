@@ -20,7 +20,7 @@ const OurServices = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:mt-6 pt-4 px-6 md:px-28">
         {services.map((service, index) => (
           <Link key={index} href={service.link}>
-            <div className=" bg-[#161921] shadow-xg border border-[#1c3caa] rounded-xl md:p-14 p-10 text-center transition duration-300 hover:bg-white hover:text-black   md:w-6/6 md:h-44 cursor-pointer ">
+            <div className=" bg-[#161921] shadow-xg border border-[#1c3caa] rounded-xl md:p-10 p-10 text-center transition duration-300 hover:bg-white hover:text-black   md:w-4/4 md:h-4/4 cursor-pointer ">
               <h3 className="text-lg font-semibold">{service.text}</h3>
             </div>
           </Link>

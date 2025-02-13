@@ -9,8 +9,12 @@ const WhatsAppButton = () => {
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50"
     >
-      <div className="bg-green-500 rounded-full p-3 shadow-lg hover:scale-110 transition-transform">
-        <FaWhatsapp className="text-white text-4xl" />
+      <div className="rounded-full p-3 shadow-lg hover:scale-110 transition-transform">
+        <FaWhatsapp
+          className="bg-green-600 text-8xl rounded-xl"
+          size={50}
+          color="white"
+        />
       </div>
     </a>
   );
