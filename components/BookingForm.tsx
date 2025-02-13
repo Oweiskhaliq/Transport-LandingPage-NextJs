@@ -52,7 +52,10 @@ const BookingForm = () => {
   };
 
   return (
-    <section className="flex flex-col font-serif md:flex-row items-center  justify-between  py-16 bg-gray-100 ">
+    <section
+      id="booking-from"
+      className="flex flex-col font-serif md:flex-row items-center  justify-between  py-16 bg-gray-100 "
+    >
       {/* Left Column - Text Section */}
       <BookingTextSection />
       {/* Right Column - Booking Form */}
