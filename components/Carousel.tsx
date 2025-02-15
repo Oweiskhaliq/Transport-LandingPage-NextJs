@@ -8,29 +8,19 @@ const Carousel = () => {
 
   const slides = [
     {
-      image: "/carouselImage/bus2.jpg",
+      image: "/carouselImage/bus1-m.webp",
       title: "Innovative Solutions",
       description: "We bring the latest technology to help grow your business.",
     },
     {
-      image: "/carouselImage/bus3.jpg",
+      image: "/carouselImage/bus6.jpg",
       title: "Professional Services",
       description: "Experience top-notch support and service from our team.",
     },
     {
-      image: "/carouselImage/bus4.jpg",
+      image: "/carouselImage/bus5.jpg",
       title: "Your Success, Our Mission",
       description: "We are dedicated to achieving your goals together.",
-    },
-    {
-      image: "/carouselImage/bus7.webp",
-      title: "Welcome to Noor Islam",
-      description: "Bus Rental And Transportation",
-    },
-    {
-      image: "/carouselImage/bus8.webp",
-      title: "Welcome to Noor Islam",
-      description: "Bus Rental And Transportation",
     },
   ];
 

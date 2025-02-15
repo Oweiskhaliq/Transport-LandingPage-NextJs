@@ -48,7 +48,7 @@ const AboutUs = () => {
       {/* Right Section - Image */}
       <div className="md:w-1/2 flex order-1 md:order-2 ">
         <img
-          src="/carouselImage/bus5.jpg"
+          src="/bus4-c.webp"
           alt="About Us"
           className="w-screen h-auto rounded-sm object-cover  shadow-lg"
         />
