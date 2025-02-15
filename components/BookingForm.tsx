@@ -1,6 +1,7 @@
 "use client";
 import BookingTextSection from "./BookingTextSection";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const BookingForm = () => {
   const [step, setStep] = useState(1);
@@ -260,26 +261,35 @@ const BookingForm = () => {
 
             <div className="flex justify-end pt-2 md:pt-10 md:space-x-4  space-x-4 ">
               {step > 1 && (
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1.6 }}
                   type="button"
-                  className=" bg-[#061138]  form-btn hover:bg-[#373f5b]  "
+                  className=" bg-form_btn_colour  form-btn hover:bg-form_btn_hover  "
                   onClick={() => setStep(step - 1)}
                 >
                   PREVIOUS
-                </button>
+                </motion.button>
               )}
               {step < 3 ? (
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1.6 }}
                   type="button"
-                  className="bg-[#061138]   form-btn hover:bg-[#373f5b]  "
+                  className="bg-form_btn_colour   form-btn hover:bg-form_btn_hover  "
                   onClick={handleNext}
                 >
                   NEXT
-                </button>
+                </motion.button>
               ) : (
-                <button type="submit" className="bg-[#c09550] form-btn">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1.6 }}
+                  type="submit"
+                  className="bg-custom_color form-btn"
+                >
                   Submit
-                </button>
+                </motion.button>
               )}
             </div>
           </form>

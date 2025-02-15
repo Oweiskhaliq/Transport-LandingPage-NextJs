@@ -56,7 +56,7 @@ const Carousel = () => {
       <NavBar />
       {/* Carousel wrapper */}
       <div className="bg-black h-screen w-screen opacity-90">
-        <div className="relative h-full overflow-hidden">
+        <div className="relative h-full overflow-hidden ">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -66,12 +66,12 @@ const Carousel = () => {
             >
               <img
                 src={slide.image}
-                className="w-full h-full object-cover   "
+                className="w-full h-full object-cover opacity-30  "
                 alt={slide.title}
               />
 
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-serif z-50">
-                <h1 className="text-[29px] ">{slide.title}</h1>
+                <h1 className="text-3xl ">{slide.title}</h1>
                 <h2 className="text-5xl font-bold mt-2">{slide.description}</h2>
               </div>
             </div>

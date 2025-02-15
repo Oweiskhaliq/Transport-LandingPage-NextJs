@@ -1,34 +1,54 @@
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import {
+  FaBars,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FiX } from "react-icons/fi";
+import { AiFillTikTok } from "react-icons/ai";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
   const pathname = usePathname();
 
+  // Framer Motion Variants for Menu Text Animation
+  const menuVariants = {
+    hidden: { opacity: 0, y: 20 }, // Start invisible and slightly below
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0, // Move to normal position
+      transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" }, // Delayed stagger effect
+    }),
+  };
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About us", href: "#about" },
     { name: "Fleet", href: "#fleet" },
     { name: "Services", href: "#services" },
-    { name: "Blog", href: "#blog" },
     { name: "About us", href: "#booking-from" },
   ];
 
   return (
     <>
       {/* Transparent Navigation Menu */}
-      <nav className="absolute top-0 md:left-0 right-0 w-full px-6 md:px-auto    py-4 flex md:justify-between  md:items-end justify-center  text-white z-50">
+      <nav className="absolute flex  top-0 md:left-0  right-0  w-full px-6  md:px-auto    py-4 md:justify-between  md:items-end justify-center   text-white z-50">
         <div className="items-start ">
           <img
             src="/logo.png"
             alt="Noor Islam Transport"
-            className="md:h-14  h-12 md:mt-2  "
+            className="md:h-14 mr-28 mr- h-12  md:mt-2  "
           />
         </div>
-        <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-32 first-letter:capitalize font-serif font-medium text-[17px] text-right">
+        <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-32 first-letter:capitalize font-serif font-medium text-lg text-right">
           {navItems.map((link) => {
             return (
               <>
@@ -49,45 +69,111 @@ const NavBar = () => {
         </ul>
         <Link
           href="#booking-from"
-          className=" font-serif text-[11px] md:block border border-white text-white px-6 rounded py-2 bg-transparent hover:bg-white hover:text-black order-2 "
+          className=" font-serif text-xs  md:block border border-white text-white text-center rounded py-2 px-4   bg-transparent hover:bg-white hover:text-black hidden md:mr-2 "
         >
           BOOK NOW
         </Link>
-        <button
-          className="md:hidden  text-white order-1 sm:ml-60 ml-32 pr-4"
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1.9 }}
+          className="md:hidden  text-white  sm:ml-60 ml-32 pr-4"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <FaBars size={28} />
-        </button>
+        </motion.button>
       </nav>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className=" absolute top-16 left-0 w-full bg-gray-800 text-white flex flex-col p-4 z-50 text-right">
-          <Link href="/" className="py-2 hover:underline">
-            Home
-          </Link>
-          <Link href="#about" className="py-2 hover:underline">
-            About Us
-          </Link>
-          <Link href="#fleet" className="py-2 hover:underline">
-            Fleet
-          </Link>
-          <Link href="#services" className="py-2 hover:underline">
-            Services
-          </Link>
-          <Link href="#blog" className="py-2 hover:underline">
-            Blog
-          </Link>
-          <Link href="#contact" className="py-2 hover:underline">
-            Contact Us
-          </Link>
-          <Link
-            href="#booking-from"
-            className=" border border-white text-white px-4 py-2 bg-transparent hover:bg-white hover:text-black"
-          >
-            BOOK NOW
-          </Link>
+        <div className="fixed top-0 left-0 w-full h-full bg-gray-900 text-gray-500 flex flex-col p-6 z-50 transition-transform duration-300">
+          {/* Logo and Close Button Row */}
+          <div className="flex items-center justify-between w-full">
+            {/* Logo */}
+            <Image
+              src="/logo.png" // Change this to your logo path
+              alt="Logo"
+              width={120}
+              height={40}
+              className="object-contain"
+            />
+
+            {/* Close Button with Rotation Animation */}
+            <motion.button
+              onClick={() => {
+                setIsRotated(!isRotated);
+                setTimeout(() => setMenuOpen(false), 300);
+              }}
+              animate={{ rotate: isRotated ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-3xl text-gray-400"
+            >
+              <FiX />
+            </motion.button>
+          </div>
+
+          {/* Menu Links with Animation */}
+          <nav className="flex flex-col gap-2 text-2xl mt-12 text-center border-b pb-8">
+            {[
+              "Home",
+              "About Us",
+              "Fleet",
+              "Services",
+              "Blog",
+              "Contact Us",
+            ].map((text, i) => (
+              <motion.div
+                key={i}
+                variants={menuVariants}
+                initial="hidden"
+                animate="visible"
+                custom={i} // Pass index for stagger effect
+              >
+                <Link
+                  href={`#${text.toLowerCase().replace(/\s+/g, "")}`}
+                  className="hover:text-white"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {text}
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
+
+          {/* Social Media Icons (Instead of Book Now Button) */}
+          <div className="mt-6 flex justify-center gap-6  text-white">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-gray-500"
+            >
+              <FaFacebookF size={16} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/nipt-2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-gray-500"
+            >
+              <FaLinkedin size={16} />
+            </a>
+            <a
+              href="https://www.instagram.com/noorislamtransport/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-gray-500"
+            >
+              <FaInstagram size={16} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@noorislamtransport"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-gray-500"
+            >
+              <AiFillTikTok size={16} />
+            </a>
+          </div>
         </div>
       )}
     </>
