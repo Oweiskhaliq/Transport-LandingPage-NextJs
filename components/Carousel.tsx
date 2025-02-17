@@ -8,17 +8,22 @@ const Carousel = () => {
 
   const slides = [
     {
-      image: "/carouselImage/bus1-m.webp",
+      image: "/carousel/bus1-m.webp",
       title: "Innovative Solutions",
       description: "We bring the latest technology to help grow your business.",
     },
     {
-      image: "/carouselImage/bus6.jpg",
+      image: "/carousel/bus11.jpg",
       title: "Professional Services",
       description: "Experience top-notch support and service from our team.",
     },
     {
-      image: "/carouselImage/bus5.jpg",
+      image: "/carousel/bus7.jpg",
+      title: "Your Success, Our Mission",
+      description: "We are dedicated to achieving your goals together.",
+    },
+    {
+      image: "/bus4-c.webp",
       title: "Your Success, Our Mission",
       description: "We are dedicated to achieving your goals together.",
     },

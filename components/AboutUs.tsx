@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -9,18 +10,18 @@ const AboutUs = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       id="about"
-      className="flex flex-col md:flex-row items-center justify-between md:py-5  bg-[#ffffff] font-serif h-full mt-5 mb-5"
+      className="flex flex-col p-4 sm:pl-8 md:pl-12 md:flex-row items-center justify-between   bg-[#ffffff] font-serif h-full mt-5 mb-5"
     >
       {/* Left Section - Text */}
-      <div className="md:w-1/2 text-left font-medium  order-2  md:px-20  md:order-1 md:mt-4 mt-10 p-6 space-y-5 ">
-        <h3 className="md:text-[15px] text-[13px] uppercase tracking-widest text-black">
+      <div className="md:w-1/2 text-left font-medium   md:mt-4 mt-10 space-y-5 ">
+        <h3 className="md:text-base text-sm uppercase tracking-widest text-black">
           WELCOME TO
         </h3>
         <h2 className="md:text-6xl  text-4xl">
           NOOR ISLAM BUS
           <i className="text-blue-600 lg:text-nowrap"> RENTAL</i>
         </h2>
-        <p className="mt-4 text-base md:text-lg text-gray-900 md:px-2">
+        <p className="mt-4 text-base md:text-lg text-gray-900 pr-12">
           Noor Islam Bus Rental Dubai & Passenger Transport by Rented Buses
           L.L.C is among the top transport providers in Dubai, U.A.E. We are
           committed to delivering high-quality bus tour services that meet your
@@ -46,11 +47,13 @@ const AboutUs = () => {
       </div>
 
       {/* Right Section - Image */}
-      <div className="md:w-1/2 flex order-1 md:order-2 ">
-        <img
+      <div className="relative w-full md:w-1/2 h-[500px] top-5">
+        <Image
           src="/bus4-c.webp"
-          alt="About Us"
-          className="w-screen h-auto rounded-sm object-cover  shadow-lg"
+          alt="About us Picture"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg shadow-lg"
         />
       </div>
     </motion.section>
