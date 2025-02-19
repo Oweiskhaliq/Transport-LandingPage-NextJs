@@ -1,10 +1,16 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const BookingTextSection = () => {
   return (
     <>
       {/* Left Column - Text Section */}
-      <div className="md:w-1/2 text-center md:text-center space-y-4 md:space-y-6 px-2 sm:px-4 md:px-8 ">
+      <motion.div
+        initial={{ x: "-50%", opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.1 }}
+        className="md:w-1/2 text-center md:text-center space-y-4 md:space-y-6 px-2 sm:px-4 md:px-8 "
+      >
         <span className="block text-xs tracking-widest uppercase">
           Why Rent a Bus from
         </span>
@@ -24,7 +30,7 @@ const BookingTextSection = () => {
           transportation for events, Noor Islam Bus Rental ensures a smooth
           experience every time.
         </p>
-      </div>
+      </motion.div>
     </>
   );
 };

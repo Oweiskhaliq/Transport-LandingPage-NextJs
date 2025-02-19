@@ -5,10 +5,10 @@ import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFacebook, FaInstagram, FaTiktok, FaPinterest } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
+import { motion } from "framer-motion";
 const ContactBar = () => {
   return (
-    <div className="flex  flex-row font-serif  justify-between items-center  bg-custom_color text-black py-1  px-4 md:px-14  text-xs md:text-xs">
+    <div className="flex  flex-row justify-between items-center  bg-golden_brown text-black py-1  px-4 md:px:10 lg:px-14 text-xs md:text-xs">
       {/* Left Section - Contact Info */}
       <div className="flex flex-col sm:flex-row items-left sm:px- space-y-2 md:space-y-0 md:space-x-8 text-center md:text-left">
         <span className="contactBar-slash">|</span>
@@ -41,7 +41,12 @@ const ContactBar = () => {
       </div>
 
       {/* Right Section - Social Icons */}
-      <div className="flex space-x-4 mt-2  md:mt-0 ">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="flex space-x-2 md:space-x-4 mt-2  md:mt-0 "
+      >
         <a
           href="https://www.facebook.com/noorislaamtransport/"
           target="_blank"
@@ -70,7 +75,7 @@ const ContactBar = () => {
         >
           <FaPinterest size={16} color="#FFFFFF" />
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 };

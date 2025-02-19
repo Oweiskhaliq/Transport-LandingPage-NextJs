@@ -2,28 +2,24 @@
 import { useState, useEffect } from "react";
 import { FaLessThan, FaGreaterThan, FaBars } from "react-icons/fa6";
 import NavBar from "./NavBar";
-
+import Image from "next/image";
+import { motion } from "framer-motion";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
     {
-      image: "/carousel/bus1-m.webp",
+      image: "/carousel/slide1.webp",
       title: "Innovative Solutions",
       description: "We bring the latest technology to help grow your business.",
     },
     {
-      image: "/carousel/bus11.jpg",
+      image: "/carousel/slide2.webp",
       title: "Professional Services",
       description: "Experience top-notch support and service from our team.",
     },
     {
-      image: "/carousel/bus7.jpg",
-      title: "Your Success, Our Mission",
-      description: "We are dedicated to achieving your goals together.",
-    },
-    {
-      image: "/bus4-c.webp",
+      image: "/carousel/slide3-2.webp",
       title: "Your Success, Our Mission",
       description: "We are dedicated to achieving your goals together.",
     },
@@ -42,16 +38,21 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 10000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-screen ">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="relative w-full h-screen "
+    >
       <NavBar />
       {/* Carousel wrapper */}
-      <div className="bg-black h-screen w-screen opacity-90">
-        <div className="relative h-full overflow-hidden ">
+      <div className="bg-gray-400 h-screen w-full ">
+        <div className="relative h-screen overflow-hidden ">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -59,15 +60,18 @@ const Carousel = () => {
                 currentIndex === index ? "opacity-80" : "opacity-0"
               }`}
             >
-              <img
+              <Image
                 src={slide.image}
-                className="w-full h-full object-cover opacity-30  "
+                className=" object-cover "
                 alt={slide.title}
+                fill
               />
 
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-serif z-50">
-                <h1 className="text-3xl ">{slide.title}</h1>
-                <h2 className="text-5xl font-bold mt-2">{slide.description}</h2>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white  z-50 ">
+                <h1 className="md:text-2xl text-lg ">{slide.title}</h1>
+                <h2 className="md:text-4xl text-2xl  font-bold mt-2">
+                  {slide.description}
+                </h2>
               </div>
             </div>
           ))}
@@ -88,7 +92,7 @@ const Carousel = () => {
       >
         <FaGreaterThan />
       </button>
-    </div>
+    </motion.div>
   );
 };
 

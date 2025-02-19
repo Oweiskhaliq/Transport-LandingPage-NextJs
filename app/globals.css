@@ -1,5 +1,5 @@
 
- @import "@fontsource/pt-serif"; /*Defaults to weight 400 */
+/*Defaults to weight 400 */
 
 @tailwind base;
 @tailwind components;

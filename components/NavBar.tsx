@@ -40,36 +40,38 @@ const NavBar = () => {
   return (
     <>
       {/* Transparent Navigation Menu */}
-      <nav className="absolute flex  top-0 md:left-0  right-0  w-full px-6  md:px-auto    py-4 md:justify-between  md:items-end justify-center   text-white z-50">
+      <nav className="absolute flex  top-0 md:left-0  right-0  w-full px-6  md:px-auto    py-4 justify-between  md:items-end   text-white z-50">
         <div className="items-start ">
           <img
             src="/logo.png"
             alt="Noor Islam Transport"
-            className="md:h-14 mr-28 mr- h-12  md:mt-2  "
+            className="md:h-14   h-12  md:mt-2  "
           />
         </div>
-        <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-32 first-letter:capitalize font-serif font-medium text-lg text-right">
-          {navItems.map((link) => {
+        <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-10 first-letter:capitalize  font-medium text-lg text-right">
+          {navItems.map((link, index) => {
             return (
               <>
-                <li>
+                <motion.li key={index}>
                   <Link
                     href={link.href}
-                    className={clsx("hover:underline underline-offset-8", {
-                      "hover:underline underline-offset-8":
-                        pathname === link.href,
-                    })}
+                    className={clsx(
+                      "relative inline-block text-white hover:text-gray-300 transition-colors duration-300 before:content-[''] before:absolute before:w-0 before:h-[2px] before:bg-white  before:left-0 before:bottom-0 before:transition-all before:duration-500  hover:before:w-full",
+                      {
+                        "": pathname === link.href,
+                      }
+                    )}
                   >
                     {link.name}
                   </Link>
-                </li>
+                </motion.li>
               </>
             );
           })}
         </ul>
         <Link
           href="#booking-from"
-          className=" font-serif text-xs  md:block border border-white text-white text-center rounded py-2 px-4   bg-transparent hover:bg-white hover:text-black hidden md:mr-2 "
+          className=" text-xs  md:block border border-white text-white text-center rounded py-2 px-4   bg-transparent hover:bg-white hover:text-black transition delay-150 duration-500 hidden md:mr-2 "
         >
           BOOK NOW
         </Link>

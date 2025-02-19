@@ -9,13 +9,13 @@ const BookingForm = () => {
     pickup: "",
     destination: "",
     pickupDate: "",
-    pickupTime: "0",
+    pickupTime: "Pickup Time",
     returnTrip: true,
     returnDate: "",
-    returnTime: "0",
-    smallSuitcases: "0",
-    largeSuitcases: "0",
-    passengers: "0",
+    returnTime: "Return Time",
+    smallSuitcases: "Number of small suitcases",
+    largeSuitcases: "Number of large suitcases",
+    passengers: "Number of passengers",
     additionalDetails: "",
     name: "",
     email: "",
@@ -55,12 +55,19 @@ const BookingForm = () => {
   return (
     <section
       id="booking-from"
-      className="flex flex-col font-serif md:flex-row items-center  justify-between  py-16 bg-gray-100 "
+      className="flex flex-col  md:flex-row items-center  justify-between  py-16 bg-gray-100 overflow-hidden"
     >
       {/* Left Column - Text Section */}
       <BookingTextSection />
       {/* Right Column - Booking Form */}
-      <div id="booking-from" className="sm:w-1/2 pt-4   font-sm  ">
+      <motion.div
+        initial={{ x: "50%", opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.1 }}
+        id="booking-from"
+        className="sm:w-1/2 pt-4   font-sm  "
+      >
         {submitted ? (
           <div className="text-left p-6 bg-green-100 text-green-800 rounded-md">
             <h3 className="text-lg font-semibold">Thank You!</h3>
@@ -68,7 +75,7 @@ const BookingForm = () => {
           </div>
         ) : (
           <form
-            className="flex text-start flex-col md:space-y-4   space-y-8  w-full  pt-20 md:pt-0 md:p-20 bg-gray-100"
+            className="flex text-center flex-col md:space-y-4   space-y-8  w-full   pt-10 md:pt-0 md:p-8 bg-gray-100"
             onSubmit={handleSubmit}
           >
             {step === 1 && (
@@ -262,8 +269,8 @@ const BookingForm = () => {
             <div className="flex justify-end pt-2 md:pt-10 md:space-x-4  space-x-4 ">
               {step > 1 && (
                 <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 1.6 }}
+                  whileHover={{ scale: 1 }}
+                  whileTap={{ scale: 1.1 }}
                   type="button"
                   className=" bg-form_btn_colour  form-btn hover:bg-form_btn_hover  "
                   onClick={() => setStep(step - 1)}
@@ -273,8 +280,8 @@ const BookingForm = () => {
               )}
               {step < 3 ? (
                 <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 1.6 }}
+                  whileHover={{ scale: 1 }}
+                  whileTap={{ scale: 1.1 }}
                   type="button"
                   className="bg-form_btn_colour   form-btn hover:bg-form_btn_hover  "
                   onClick={handleNext}
@@ -284,9 +291,9 @@ const BookingForm = () => {
               ) : (
                 <motion.button
                   whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 1.6 }}
+                  whileTap={{ scale: 1.8 }}
                   type="submit"
-                  className="bg-custom_color form-btn"
+                  className="bg-golden_brown form-btn"
                 >
                   Submit
                 </motion.button>
@@ -294,7 +301,7 @@ const BookingForm = () => {
             </div>
           </form>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 };

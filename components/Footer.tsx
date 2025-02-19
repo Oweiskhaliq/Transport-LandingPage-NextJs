@@ -7,12 +7,18 @@ import {
   FaPinterest,
   FaFacebook,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0b1b3e] text-gray-300 py-8 font-serif">
+    <footer className="bg-[#0b1b3e] text-gray-300 py-8 ">
       {/* Top Row - Logo and Menu */}
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-16 md:h-40 h-24 border-b border-gray-600">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="container mx-auto flex flex-col md:flex-row justify-between items-center px-16 md:h-40 h-24 border-b border-gray-600"
+      >
         <div>
           <img src="./logo.png" alt="Noor Islam Transport" className="h-12" />
         </div>
@@ -30,10 +36,15 @@ const Footer = () => {
             Contact Us
           </Link>
         </nav>
-      </div>
+      </motion.div>
 
       {/* Middle Row - 3 Columns */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8  text-center md:text-left px-12 mt-20  ">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8  text-center md:text-left px-12 mt-20  "
+      >
         {/* About Section */}
         <div className="space-y-6 p-4">
           <h3 className="text-xl font-semibold">NOOR ISLAM BUS RENTAL</h3>
@@ -102,10 +113,15 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
       {/* Bottom Row - Copyright & Social Icons */}
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 mt-20 border-t border-gray-700 pt-4 ">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 mt-20 border-t border-gray-700 pt-4 "
+      >
         <p className="text-gray-400 order-2 p-4">
           Noor Islam Transport © 2024. All Rights Reserved.
         </p>
@@ -139,7 +155,7 @@ const Footer = () => {
             <FaPinterest size={34} color="#FFFFFF" />
           </a>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };
