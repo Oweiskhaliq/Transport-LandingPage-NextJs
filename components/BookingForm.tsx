@@ -27,7 +27,7 @@ const BookingForm = () => {
   const handleNext = () => {
     if (step === 1) {
       if (!formData.pickup || !formData.destination) {
-        alert("Please fill in all required fields.");
+        alert("Please fill  all required fields.");
         return;
       }
     }
@@ -272,7 +272,7 @@ const BookingForm = () => {
                   whileHover={{ scale: 1 }}
                   whileTap={{ scale: 1.1 }}
                   type="button"
-                  className=" bg-form_btn_colour  form-btn hover:bg-form_btn_hover  "
+                  className=" bg-dark_blue  form-btn hover:bg-light_blue "
                   onClick={() => setStep(step - 1)}
                 >
                   PREVIOUS
@@ -283,7 +283,7 @@ const BookingForm = () => {
                   whileHover={{ scale: 1 }}
                   whileTap={{ scale: 1.1 }}
                   type="button"
-                  className="bg-form_btn_colour   form-btn hover:bg-form_btn_hover  "
+                  className="bg-dark_blue   form-btn hover:bg-light_blue  "
                   onClick={handleNext}
                 >
                   NEXT

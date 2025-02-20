@@ -60,9 +60,8 @@ const AboutUs = () => {
         <Image
           src="/carousel/slide2.webp"
           alt="About us Picture"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg shadow-lg"
+          fill
+          className="rounded-lg shadow-lg object-cover"
         />
       </motion.div>
     </section>

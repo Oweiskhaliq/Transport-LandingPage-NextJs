@@ -15,8 +15,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         golden_brown: "#a27836",
-        form_btn_colour:"#061138",
-        form_btn_hover: "#373f5b"
+        dark_blue:"#061138",
+        light_blue: "#373f5b"
       },
     },
   },

@@ -34,7 +34,7 @@ const NavBar = () => {
     { name: "About us", href: "#about" },
     { name: "Fleet", href: "#fleet" },
     { name: "Services", href: "#services" },
-    { name: "About us", href: "#booking-from" },
+    { name: "Contat us", href: "#booking-from" },
   ];
 
   return (
@@ -49,23 +49,21 @@ const NavBar = () => {
           />
         </div>
         <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-10 first-letter:capitalize  font-medium text-lg text-right">
-          {navItems.map((link, index) => {
+          {navItems.map((item) => {
             return (
-              <>
-                <motion.li key={index}>
-                  <Link
-                    href={link.href}
-                    className={clsx(
-                      "relative inline-block text-white hover:text-gray-300 transition-colors duration-300 before:content-[''] before:absolute before:w-0 before:h-[2px] before:bg-white  before:left-0 before:bottom-0 before:transition-all before:duration-500  hover:before:w-full",
-                      {
-                        "": pathname === link.href,
-                      }
-                    )}
-                  >
-                    {link.name}
-                  </Link>
-                </motion.li>
-              </>
+              <motion.li key={item.name}>
+                <Link
+                  href={item.href}
+                  className={clsx(
+                    "relative inline-block text-white hover:text-gray-300 transition-colors duration-300 before:content-[''] before:absolute before:w-0 before:h-[2px] before:bg-white  before:left-0 before:bottom-0 before:transition-all before:duration-500  hover:before:w-full",
+                    {
+                      "underline underline-offset-8": pathname === item.href,
+                    }
+                  )}
+                >
+                  {item.name}
+                </Link>
+              </motion.li>
             );
           })}
         </ul>
@@ -115,27 +113,20 @@ const NavBar = () => {
 
           {/* Menu Links with Animation */}
           <nav className="flex flex-col gap-2 text-2xl mt-12 text-center border-b pb-8">
-            {[
-              "Home",
-              "About Us",
-              "Fleet",
-              "Services",
-              "Blog",
-              "Contact Us",
-            ].map((text, i) => (
+            {navItems.map((text, index) => (
               <motion.div
-                key={i}
+                key={text.name}
                 variants={menuVariants}
                 initial="hidden"
                 animate="visible"
-                custom={i} // Pass index for stagger effect
+                custom={index} // Pass index for stagger effect
               >
                 <Link
-                  href={`#${text.toLowerCase().replace(/\s+/g, "")}`}
+                  href={`#${text.href.toLowerCase().replace(/\s+/g, "")}`}
                   className="hover:text-white"
                   onClick={() => setMenuOpen(false)}
                 >
-                  {text}
+                  {text.name}
                 </Link>
               </motion.div>
             ))}
