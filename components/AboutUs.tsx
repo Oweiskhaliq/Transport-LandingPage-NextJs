@@ -58,7 +58,7 @@ const AboutUs = () => {
         className="relative w-full md:w-1/2 h-[500px] top-5"
       >
         <Image
-          src="/carousel/slide2.webp"
+          src="/about.webp"
           alt="About us Picture"
           fill
           className="rounded-lg shadow-lg object-cover"
