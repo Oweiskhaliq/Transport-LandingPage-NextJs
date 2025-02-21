@@ -16,20 +16,20 @@ const BookingTextSection = () => {
           Why Rent a Bus from
         </span>
         <h2 className="text-3xl leading-relaxed font-bold">
-          Noor Islam Bus Rental?
+          UAE Transport And Rental Buses?
         </h2>
         <p className="text-center text-base md:text-lg leading-relaxed max-w-[480px] mx-auto">
-          At Noor Islam Bus Rental, we offer tailored transportation solutions
-          for every need. Whether you need a 7 seater luxury car, a Toyota
-          Hiace, a 14 seater minivan, or a 50 seater bus, our fleet is diverse
-          and well-maintained. We provide flexible rental options on a daily,
-          monthly, quarterly, or yearly basis, ensuring convenience and
+          At UAE Transport And Rental Buses, we offer tailored transportation
+          solutions for every need. Whether you need a 7 seater luxury car, a
+          Toyota Hiace, a 14 seater minivan, or a 30 seater bus, our fleet is
+          diverse and well-maintained. We provide flexible rental options on a
+          daily, monthly, quarterly, or yearly basis, ensuring convenience and
           efficiency for businesses across the UAE. With competitive rates and a
           strong focus on customer satisfaction, we’ve become the trusted choice
           for businesses that value comfort, safety, and professionalism.
           Whether you need airport transfers, a shuttle service, or bus
-          transportation for events, Noor Islam Bus Rental ensures a smooth
-          experience every time.
+          transportation for events, UAE Transport And Rental Buses ensures a
+          smooth experience every time.
         </p>
       </motion.div>
     </>

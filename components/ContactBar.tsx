@@ -13,30 +13,30 @@ const ContactBar = () => {
       <div className="flex flex-col sm:flex-row items-left sm:px- space-y-2 md:space-y-0 md:space-x-8 text-center md:text-left">
         <span className="contactBar-slash">|</span>
         {/* Phone */}
-        <a href="tel:+971502631195" className="contactBar-items">
+        <a href="tel:+971557572712" className="contactBar-items">
           <IoIosCall size={16} />
-          <span>+971 50 263 1195</span>
+          <span>+971 55 757 2712</span>
         </a>
         <span className="contactBar-slash">|</span>
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/971502631195"
+          href="https://wa.me/971557572712"
           target="_blank"
           className="contactBar-items"
         >
           <IoLogoWhatsapp color="#48c858" size={16} />
-          <span>+971 50 263 1195</span>
+          <span>+971 55 757 2712</span>
         </a>
         <span className="contactBar-slash">|</span>
 
         {/* Email */}
         <a
-          href="mailto:info@noorislambusrental.com"
+          href="mailto:uaetransport1982@gmail.com"
           className="contactBar-items text-xs"
         >
           <MdEmail size={16} />
-          <span>info@noorislambusrental.com</span>
+          <span>uaetransport1982@gmail.com</span>
         </a>
       </div>
 

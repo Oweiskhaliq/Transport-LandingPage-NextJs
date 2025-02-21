@@ -20,7 +20,11 @@ const Footer = () => {
         className="container mx-auto flex flex-col md:flex-row justify-between items-center px-16 md:h-40 h-24 border-b border-gray-600"
       >
         <div>
-          <img src="./logo.png" alt="Noor Islam Transport" className="h-12" />
+          <img
+            src="./logotrans.png"
+            alt="UAE Transport"
+            className="md:h-20 h-28"
+          />
         </div>
         <nav className="md:flex space-x-6 text-lg hidden">
           <Link href="/" className="hover:text-white">
@@ -47,7 +51,9 @@ const Footer = () => {
       >
         {/* About Section */}
         <div className="space-y-6 p-4">
-          <h3 className="text-xl font-semibold">NOOR ISLAM BUS RENTAL</h3>
+          <h3 className="text-xl font-semibold">
+            UAE Transport And Rental Buses
+          </h3>
           <p className="mt-2 text-gray-400">
             Your trusted partner for reliable transportation services. Noor
             Islam Bus Rental offers a fleet of carefully selected vehicles,
@@ -65,24 +71,24 @@ const Footer = () => {
               className="hover:text-white"
               target="_blank"
             >
-              info@noorislambusrental.com
+              uaetransport1982@gmail.com
             </Link>{" "}
             <br />
             <Link
-              href="tel:+971502631195"
+              href="tel:+971 55 757 2712"
               className="hover:text-white"
               target="_blank"
             >
-              Tel: +971 50 263 1195
+              Tel: +971 55 757 2712
             </Link>
             <br />
             <Link
-              href="https://wa.me/971502631195"
+              href="https://wa.me/971 55 757 2712"
               className="hover:text-white"
               target="_blank"
             >
               {" "}
-              Mob: +971 50 263 1195
+              Mob: +971 55 757 2712
             </Link>
           </p>
         </div>
@@ -123,7 +129,7 @@ const Footer = () => {
         className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 mt-20 border-t border-gray-700 pt-4 "
       >
         <p className="text-gray-400 order-2 p-4">
-          Noor Islam Transport © 2024. All Rights Reserved.
+          UAE Transport And Rental Buses © 2024. All Rights Reserved.
         </p>
         <div className="flex space-x-4 mt-4 md:mt-0 order-1 md:order-2">
           <a

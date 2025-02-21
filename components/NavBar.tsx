@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { motion } from "framer-motion";
+import { motion, px } from "framer-motion";
 import Image from "next/image";
 import { FiX } from "react-icons/fi";
 import { AiFillTikTok } from "react-icons/ai";
@@ -40,12 +40,12 @@ const NavBar = () => {
   return (
     <>
       {/* Transparent Navigation Menu */}
-      <nav className="absolute flex  top-0 md:left-0  right-0  w-full px-6  md:px-auto    py-4 justify-between  md:items-end   text-white z-50">
+      <nav className="absolute flex  top-0 md:left-0  right-0  w-full px-6  md:px-auto    py-4 justify-between items-center  text-white z-50">
         <div className="items-start ">
           <img
-            src="/logo.png"
-            alt="Noor Islam Transport"
-            className="md:h-14   h-12  md:mt-2  "
+            src="/logotrans.png"
+            alt="UAE TRANSPORT"
+            className="md:h-20    h-16  md:mt-  "
           />
         </div>
         <ul className="md:flex hidden space-x-4  sm:ml-auto sm:px-10 first-letter:capitalize  font-medium text-lg text-right">
@@ -90,7 +90,7 @@ const NavBar = () => {
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
             <Image
-              src="/logo.png" // Change this to your logo path
+              src="/logotrans.png" // Change this to your logo path
               alt="Logo"
               width={120}
               height={40}
@@ -122,7 +122,7 @@ const NavBar = () => {
                 custom={index} // Pass index for stagger effect
               >
                 <Link
-                  href={`#${text.href.toLowerCase().replace(/\s+/g, "")}`}
+                  href={`${text.href.toLowerCase().replace(/\s+/g, "")}`}
                   className="hover:text-white"
                   onClick={() => setMenuOpen(false)}
                 >

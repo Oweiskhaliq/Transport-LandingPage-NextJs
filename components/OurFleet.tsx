@@ -2,25 +2,12 @@
 import { motion } from "framer-motion";
 const OurFleet = () => {
   const fleet = [
-    // {
-    //   image: "/fleet/50-seater.jpg",
-    //   text: "50 Seater Bus Rental Dubai",
-    // },
-    // { image: "/fleet/35.jpg", text: "35 Seater Luxury Bus Rental Dubai" },
-    // { image: "/fleet/33-2.webp", text: "33 Seater Bus Rental in Dubai" },
     {
       image: "/fleet/30-seater-coster.webp",
       text: "30 Seater Bus Rental in Dubai",
     },
-    // { image: "/fleet/26-1.webp", text: "26 Seater Bus Rental in Dubai" },
-    // {
-    //   image: "/fleet/22-seater-coster.webp",
-    //   text: "22 Seater Coaster Bus Rental in Dubai",
-    // },
     { image: "/fleet/19-Mercedes.jpg", text: "19 Seater Van Rental in Dubai" },
     { image: "/fleet/14.jpg", text: "14 Seater Van for Rent in Dubai" },
-    // { image: "/fleet/13-seater.webp", text: "13 Seater Van Rental Dubai" },
-    // { image: "/fleet/7.webp", text: "7 Seater Car Rental in Dubai" },
   ];
 
   return (
@@ -29,7 +16,7 @@ const OurFleet = () => {
       className="text-center py-12  space-y-4 bg-gray-100  mt-12 overflow-hidden"
     >
       <p className="text-[#161921] uppercase tracking-wider text-[13px]">
-        NOOR ISLAM
+        UAE Transport And Rental Buses
       </p>
       <h2 className=" text-[34px] md:text-[57px] ">Our Fleet</h2>
       <motion.div

@@ -3,15 +3,14 @@ import { useState, useEffect } from "react";
 import { FaLessThan, FaGreaterThan, FaBars } from "react-icons/fa6";
 import NavBar from "./NavBar";
 import Image from "next/image";
-import { motion } from "framer-motion";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
     {
       image: "/carousel/slide1.webp",
-      title: "Innovative Solutions",
-      description: "We bring the latest technology to help grow your business.",
+      title: "Wellcome to  UAE Transport",
+      description: "Buss Rental And Transportation.",
     },
     {
       image: "/carousel/slide2.webp",
@@ -43,12 +42,7 @@ const Carousel = () => {
   }, [currentIndex]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="relative w-full h-screen "
-    >
+    <div className="relative w-full h-screen ">
       <NavBar />
       {/* Carousel wrapper */}
       <div className="bg-gray-400 h-screen w-full ">
@@ -92,7 +86,7 @@ const Carousel = () => {
       >
         <FaGreaterThan />
       </button>
-    </motion.div>
+    </div>
   );
 };
 
