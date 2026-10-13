@@ -6,7 +6,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
+ 
 } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";

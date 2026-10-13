@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import {
-  FaFacebookF,
   FaInstagram,
   FaTiktok,
   FaPinterest,
