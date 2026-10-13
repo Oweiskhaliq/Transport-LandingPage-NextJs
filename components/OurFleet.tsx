@@ -6,8 +6,11 @@ const OurFleet = () => {
       image: "/fleet/30-seater-coster.webp",
       text: "30 Seater Bus Rental in Dubai",
     },
-    { image: "/fleet/19-Mercedes.jpg", text: "19 Seater Van Rental in Dubai" },
-    { image: "/fleet/14.jpg", text: "14 Seater Van for Rent in Dubai" },
+    { image: "/fleet/19-Mercedes.jpg", 
+     text: "19 Seater Van Rental in Dubai" 
+    },
+    { image: "/fleet/14.JPG", 
+     text: "14 Seater Van for Rent in Dubai" },
   ];
 
   return (
